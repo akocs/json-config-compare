@@ -1,0 +1,7 @@
+# Copyright 2022 Tony Akocs
+# SPDX-License-Identifier: MIT
+- id: json-config-compare
+  name: JSON compare config files
+  entry: json-config-compare
+  language: python
+  types: [python]

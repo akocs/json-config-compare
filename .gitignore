@@ -1,0 +1,11 @@
+#
+build/
+develop-eggs/
+dist/
+*.egg-info/
+version.txt
+.vscode/
+
+# test files and directory
+sample.cdk.json
+cdk.json
