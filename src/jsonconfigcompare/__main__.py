@@ -13,15 +13,15 @@ If your config files are at the top of the directory structure just pass in blan
 - repo: https://github.com/akocs/json-config-compare
     rev: main
     hooks:
-      - id: config-compare
-        name: config-compare
+      - id: json-config-compare
+        name: json-config-compare
         description: Compare the projects sample config keys to developers config file
         language: python
         language_version: 3.8.6
         args:
           [
-            "--file1=config.json",
-            "--file2=config-sample.json",
+            "--file1=cdk.json",
+            "--file2=sample.cdk.json",
           ]
 
 or to run it locally from the .git/hooks directory
@@ -36,8 +36,8 @@ or to run it locally from the .git/hooks directory
         entry: python .git/hooks/jsonconfigcompare.py
         args:
           [
-            "--file1=config.json",
-            "--file2=config-sample.json",
+            "--file1=cdk.json",
+            "--file2=sample.cdk.json",
           ]
 
 """
@@ -54,13 +54,6 @@ def __loadConfigFile(fileName: str) -> list:
         except Exception as e:
             print(f"Error: {e}")
     return keys
-
-# def __get_keys(dl, keys_list):
-#     if isinstance(dl, dict):
-#         keys_list += dl.keys()
-#         map(lambda x: __get_keys(x, keys_list), dl.values())
-#     elif isinstance(dl, list):
-#         map(lambda x: __get_keys(x, keys_list), dl)
 
 def __get_keys(data, keys_list):
     if isinstance(data, dict):
