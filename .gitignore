@@ -5,6 +5,9 @@ dist/
 *.egg-info/
 version.txt
 .vscode/
+.DS_Store
+src/.DS_Store
+src/jsonconfigcompare/.DS_Store
 
 # test files and directory
 sample.cdk.json

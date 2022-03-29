@@ -11,13 +11,12 @@ parameter, --dir, that is also passed just in-case your config files are in a di
 If your config files are at the top of the directory structure just pass in blank
 
 - repo: https://github.com/akocs/json-config-compare
-    rev: main
+    rev: v0.3.0
     hooks:
       - id: json-config-compare
         name: json-config-compare
         description: Compare the projects sample config keys to developers config file
         language: python
-        language_version: 3.8.6
         args:
           [
             "--file1=cdk.json",
@@ -32,7 +31,6 @@ or to run it locally from the .git/hooks directory
         name: json-config-compare
         description: Compare the projects sample config keys to developers config file
         language: python
-        language_version: 3.8.6
         entry: python .git/hooks/jsonconfigcompare.py
         args:
           [

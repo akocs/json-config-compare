@@ -45,7 +45,7 @@ json-config-compare
 If you want to run it from Github use this configuration
 ```yaml
  -  repo: https://github.com/akocs/json-config-compare
-    rev: v0.2.0
+    rev: v0.3.0
     hooks:
       - id: json-config-compare
         always_run: true
